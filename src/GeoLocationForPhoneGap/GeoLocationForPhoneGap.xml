@@ -7,7 +7,7 @@
     </icon>
     <phonegap enabled="true"/>
     <properties>
-        <property key="buttonLabel" type="translatableString" required="true">
+        <property key="buttonLabel" type="translatableString" required="false">
             <caption>Label</caption>
             <category>Button</category>
             <description></description> 
@@ -16,6 +16,11 @@
             <caption>Class</caption>
             <category>Button</category>
             <description></description> 
+        </property>
+        <property key="showButton" type="boolean" defaultValue="true">
+            <caption>Show Button</caption>
+            <category>Button</category>
+            <description>Hide or display the button to set the Latitude/Longitude</description> 
         </property>
         <property key="latAttr" type="attribute" required="true">
             <caption>Latitude Attribute</caption>
@@ -40,6 +45,16 @@
             <category>Events</category>
             <description></description> 
             <returnType type="Void"/>
+        </property>
+        <property key="onFailureDescription" type="translatableString" required="true">
+            <caption>Failure description</caption>
+            <category>Events</category>
+            <description>Description shown when the widget fails to retrieve the geolocation</description>
+        </property>
+        <property key="triggerOnStartup" type="boolean" defaultValue="false">
+            <caption>Trigger on startup</caption>
+            <category>Events</category>
+            <description>When enabled it will try to retrieve the latitude and longitude on startup</description>
         </property>
     </properties>
 </widget>
